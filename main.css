@@ -1,0 +1,365 @@
+body {
+  background: #f0f5f5;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#logo_container {
+	position: relative;
+	width: 30%;
+}
+
+#left_menu {
+	display: block;
+	width: 100%;
+}
+
+#small_dev_menu {
+	display: none;
+	text-align: center;
+}
+
+#content {
+	padding-bottom: 7%;
+}
+
+@media only screen and (max-width: 600px) {
+	#left_menu {
+		display: none;
+	}
+
+	#small_dev_menu {
+		display: block;
+		cursor: pointer;
+	}
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.sched {
+		font: 1.2rem Calibri, sans-serif;
+		border: 2px solid dodgerblue;
+		border-collapse: collapse;
+		text-align: center;
+		background-color: lightgray;
+		color: darkblue;
+		width: 85%;
+		user-select: none;
+	}
+
+.sched td {
+		border: 2px solid dodgerblue;
+		border-collapse: collapse;
+		padding: 3px 3px;
+	}
+
+.sched th {
+		border: 2px solid dodgerblue;
+		border-collapse: collapse;
+		background-color: #a6a6a6;
+		padding: 3px 3px;
+		width: 150px;
+	}
+
+.sched p {
+		margin: 3px 3px;
+		cursor: pointer;
+		background-color: transparent;
+		border-radius: 3px;
+		width: auto;
+	}
+
+	.note {
+		font: 0.9rem Calibri, sans-serif;
+		border: none;
+		border-collapse: collapse;
+		text-align: center;
+		background-color: transparent;
+		color: black;
+		width: 85%;
+		user-select: none;
+		cursor: pointer;
+	}
+
+	.note td {
+		width: 16.67%;
+		height: 3rem;
+		border: none;
+		border-collapse: collapse;
+		word-wrap: break-word;
+		overflow-wrap: break-word;
+		padding-top: 5px;
+	}
+
+.tbl {
+		font: 1.4rem Calibri, sans-serif;
+		border-collapse: collapse;
+		text-align: center;
+		width: 95%;
+}
+
+.available {
+		border: 2px solid green;
+		background-color: #e6ffe6;
+		color: green;
+}
+
+.available tr:hover {
+		background-color: #99ff99;
+		cursor: pointer;
+}
+
+.available tr:nth-child(even) {
+		background-color: #ccffcc;
+}
+
+.available tr:nth-child(even):hover {
+		background-color: #99ff99;
+}
+
+.available td {
+		border: 2px solid green;
+		border-collapse: collapse;
+		padding: 3px 3px;
+	}
+
+.available th {
+		border: 2px solid green;
+		border-collapse: collapse;
+		background-color: #e6ffe6;
+		align-content: center;
+		padding: 3px 3px;
+	}
+
+.unavailable {
+		border: 2px solid #990000;
+		background-color: #ffcccc;
+		color: #990000;
+}
+
+.unavailable tr:hover {
+		background-color: #ff8080;
+		cursor: pointer;
+}
+
+.unavailable tr:nth-child(even) {
+		background-color: #ffb3b3;
+}
+
+.unavailable tr:nth-child(even):hover {
+		background-color: #ff8080;
+}
+
+.unavailable td {
+		border: 2px solid #990000;
+		border-collapse: collapse;
+		padding: 3px 3px;
+	}
+
+.unavailable th {
+		border: 2px solid #990000;
+		border-collapse: collapse;
+		background-color: #ffcccc;
+		align-content: center;
+		padding: 3px 3px;
+	}
+
+#driver_select {
+		position: absolute;
+		border: 2px solid dodgerblue;
+		border-radius: 4px;
+		background-color: lightgray;
+		height: auto;
+		width: auto;
+		max-height: 200px;
+		z-index: 2;
+		overflow: scroll;
+}
+
+#unsign_menu {
+		display: none;
+		position: absolute;
+		border: 2px solid red;
+		border-radius: 4px;
+		background-color: lightgray;
+		font-size: 1.1rem;
+		height: auto;
+		width: auto;
+		z-index: 2;
+}
+
+#modal {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.3);
+}
+
+#custom_alert {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 3;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.3);
+}
+
+#alert_content {
+		display: none;
+		position: absolute;
+		width: 40%;
+		height: 33%;
+		border: 1px solid;
+		border-radius: 5px;
+		background-color: lightgray;
+}
+
+#alert_header {
+		position: relative;
+		width: 96%;
+		height: 16%;
+		left: 2%;
+		border-bottom: 2px solid #b3b3b3;
+}
+
+#alert_body {
+		position: relative;
+		width: 100%;
+		height: 60%;
+}
+
+#alert_footer {
+		position: relative;
+		width: 100%;
+		height: 24%;
+}
+
+#alert_msg {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		top: 10%;
+		left: 10%;
+		width: 80%;
+		height: 70%;
+		font-size: 1.05rem;
+		color: darkblue;
+		text-align: center;
+}
+
+#alert_caption {
+		float: left;
+		padding-left: 10px;
+		padding-top: 4px;
+		font-size: 1.1rem;
+		font-weight: bold;
+		color: darkblue;
+}
+
+#alert_close {
+		float: right;
+		padding-right: 5px;
+}
+
+#alert_buttons {
+		display: flex;
+		position: relative;
+		width: 50%;
+		left: 25%;
+		justify-content: space-around;
+		align-items: center;
+}
+
+#driver_edit {
+		align-items: center;
+		justify-content: center;
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 2;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.3);
+}
+
+#driver_edit_content {
+		position: absolute;
+		overflow-y: scroll;
+		overflow-x: hidden;
+		padding: 10px;
+		font-family: "Calibri", sans-serif, serif;
+		font-size: 1rem;
+		border: 1px solid blue;
+		border-radius: 5px;
+		box-shadow: 0 0 5px 5px rgba(0, 102, 255, 0.3);
+		background-color: lightgray;
+		width: 65%;
+		height: 60%;
+}
+
+#vhc_edit {
+		align-items: center;
+		justify-content: center;
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 2;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.3);
+}
+
+#vhc_edit_content {
+		position: absolute;
+		overflow-y: scroll;
+		overflow-x: hidden;
+		padding: 10px;
+		font-family: "Calibri", sans-serif, serif;
+		font-size: 1rem;
+		border: 1px solid blue;
+		border-radius: 5px;
+		box-shadow: 0 0 5px 5px rgba(0, 102, 255, 0.3);
+		background-color: lightgray;
+		width: 60%;
+		height: 60%;
+}
+
+#warning_modal {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 3;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.3);
+}
+
+#warning_container {
+		overflow-y: scroll;
+		left: 25%;
+		top: 20%;
+		width: auto;
+		max-width: 50%;
+		height: auto;
+		max-height: 45%;
+		border: 1px solid orange;
+		font-size: 1.2rem;
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+}
